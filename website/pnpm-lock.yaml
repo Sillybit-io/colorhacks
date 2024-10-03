@@ -42,12 +42,6 @@ importers:
       docusaurus-plugin-typedoc:
         specifier: ^1.0.5
         version: 1.0.5(typedoc-plugin-markdown@4.2.9(typedoc@0.26.7(typescript@5.5.4)))
-      markdown-loader:
-        specifier: ^8.0.0
-        version: 8.0.0(webpack@5.95.0)
-      raw-loader:
-        specifier: ^4.0.2
-        version: 4.0.2(webpack@5.95.0)
       typedoc:
         specifier: ^0.26.7
         version: 0.26.7(typescript@5.5.4)
@@ -2928,19 +2922,8 @@ packages:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
     hasBin: true
 
-  markdown-loader@8.0.0:
-    resolution: {integrity: sha512-dxrR3WhK/hERbStPFb/yeNdEeWCKa2qUDdXiq3VTruBUWufOtERX04X0K44K4dnlN2i9pjSEzYIQJ3LjH0xkEw==}
-    engines: {node: '>=12.22.9'}
-    peerDependencies:
-      webpack: ^5.0.0
-
   markdown-table@3.0.3:
     resolution: {integrity: sha512-Z1NL3Tb1M9wH4XESsCDEksWoKTdlUafKc4pt0GRwjUyXaCFZ+dc3g2erqB6zm3szA2IUSi7VnPI+o/9jnxh9hw==}
-
-  marked@4.3.0:
-    resolution: {integrity: sha512-PRsaiG84bK+AMvxziE/lCFss8juXjNaWzVbN5tXAm4XjeaS9NAHhop+PjQxz2A9h8Q4M/xGmzP8vqNwy6JeK0A==}
-    engines: {node: '>= 12'}
-    hasBin: true
 
   mdast-util-directive@3.0.0:
     resolution: {integrity: sha512-JUpYOqKI4mM3sZcNxmF/ox04XYFFkNwr0CFlrQIkCwbvH0xzMCqkMqAde9wRd80VAhaUrwFwKm2nxretdT1h7Q==}
@@ -3761,12 +3744,6 @@ packages:
   raw-body@2.5.2:
     resolution: {integrity: sha512-8zGqypfENjCIqGhgXToC8aB2r7YrBX+AQAfIPs/Mlk+BtPTztOvTS01NRW/3Eh60J+a48lt8qsCzirQ6loCVfA==}
     engines: {node: '>= 0.8'}
-
-  raw-loader@4.0.2:
-    resolution: {integrity: sha512-ZnScIV3ag9A4wPX/ZayxL/jZH+euYb6FcUinPcgiQW0+UBtEv0O6Q3lGd3cqJ+GHH+rksEv3Pj99oxJ3u3VIKA==}
-    engines: {node: '>= 10.13.0'}
-    peerDependencies:
-      webpack: ^4.0.0 || ^5.0.0
 
   rc@1.2.8:
     resolution: {integrity: sha512-y3bGgqKj3QBdxLbLkomlohkvsA8gdAiUQlSBJnBhfn+BPxg4bc62d8TcBW15wavDfgexCgccckhcZvywyQYPOw==}
@@ -8475,14 +8452,7 @@ snapshots:
       punycode.js: 2.3.1
       uc.micro: 2.1.0
 
-  markdown-loader@8.0.0(webpack@5.95.0):
-    dependencies:
-      marked: 4.3.0
-      webpack: 5.95.0
-
   markdown-table@3.0.3: {}
-
-  marked@4.3.0: {}
 
   mdast-util-directive@3.0.0:
     dependencies:
@@ -9542,12 +9512,6 @@ snapshots:
       http-errors: 2.0.0
       iconv-lite: 0.4.24
       unpipe: 1.0.0
-
-  raw-loader@4.0.2(webpack@5.95.0):
-    dependencies:
-      loader-utils: 2.0.4
-      schema-utils: 3.3.0
-      webpack: 5.95.0
 
   rc@1.2.8:
     dependencies:

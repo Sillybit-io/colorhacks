@@ -41,6 +41,10 @@ jobs:
       # - name: Codecov
       #   uses: codecov/codecov-action@v3.1.0
 
+      - name: Install the website
+        if: github.ref == 'refs/heads/main'
+        run: pnpm run docs:docusaurus:install
+
       - name: Build the website
         if: github.ref == 'refs/heads/main'
         run: pnpm run docs:build

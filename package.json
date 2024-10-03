@@ -33,6 +33,7 @@
     "test:release": "semantic-release --dry-run",
     "docs:typedoc": "typedoc src/index.ts",
     "docs:docusaurus": "cd website && pnpm run build",
+    "docs:docusaurus:install": "cd website && pnpm install",
     "docs:build": "pnpm run docs:typedoc && pnpm run docs:docusaurus"
   },
   "repository": {
