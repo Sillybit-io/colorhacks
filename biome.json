@@ -1,0 +1,138 @@
+{
+  "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+
+  "organizeImports": {
+    "enabled": true
+  },
+
+  "linter": {
+    "enabled": true,
+    "ignore": [
+      "node_modules",
+      "docs",
+      "dist",
+      "public",
+      "assets",
+      "**/node_modules/**",
+      "bin",
+      "./src/generated",
+      "./src/graphql",
+      "scripts",
+      "./nestjs-graph.json",
+      ".next",
+      "./src/metronic/**",
+      ".astro",
+      "./package.json",
+      "./.lintstagedrc.json",
+      "coverage"
+    ],
+    "rules": {
+      "recommended": true,
+      "suspicious": {
+        "noExplicitAny": "error"
+      },
+      "correctness": {
+        "noUnusedImports": "error"
+      },
+      "style": {
+        "useNodejsImportProtocol": "off",
+        "useImportType": "off"
+      },
+      "a11y": {
+        "noSvgWithoutTitle": "off"
+      }
+    }
+  },
+
+  "formatter": {
+    "enabled": true,
+    "formatWithErrors": false,
+    "indentStyle": "space",
+    "indentWidth": 2,
+    "lineWidth": 80,
+    "lineEnding": "lf",
+    "ignore": [
+      "node_modules",
+      "docs",
+      "dist",
+      "public",
+      "**/node_modules/**",
+      "bin",
+      "scripts",
+      ".next",
+      "./src/metronic/**",
+      ".astro",
+      "./package.json",
+      "./.lintstagedrc.json",
+      "coverage"
+    ]
+  },
+
+  "javascript": {
+    "formatter": {
+      "quoteStyle": "single",
+      "jsxQuoteStyle": "single",
+      "enabled": true
+    },
+    "parser": {
+      "unsafeParameterDecoratorsEnabled": true
+    }
+  },
+
+  "files": {
+    "include": [
+      "src/**/*.ts",
+      "src/**/*.tsx",
+      "src/**/*.js",
+      "src/**/*.jsx",
+      "src/**/*.json",
+      "src/**/*.mjs",
+      "app/**/*.ts",
+      "app/**/*.tsx",
+      "app/**/*.js",
+      "app/**/*.jsx",
+      "app/**/*.json",
+      "app/**/*.mjs",
+      "./*.ts",
+      "./*.tsx",
+      "./*.js",
+      "./*.jsx",
+      "./*.json",
+      "./*.mjs",
+      "src/**/*.astro"
+    ],
+    "ignore": [
+      "node_modules",
+      "**/node_modules/**",
+      "dist",
+      "bin",
+      ".expo",
+      "./expo-env.d.ts",
+      "scripts",
+      ".next",
+      "./src/metronic/**",
+      ".astro",
+      "./package.json",
+      "./.lintstagedrc.json",
+      "coverage"
+    ],
+    "ignoreUnknown": true
+  },
+
+  "overrides": [
+    {
+      "include": ["*.svelte", "*.astro", "*.vue"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useConst": "off",
+            "useImportType": "off"
+          },
+          "correctness": {
+            "noUnusedImports": "off"
+          }
+        }
+      }
+    }
+  ]
+}

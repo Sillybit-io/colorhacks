@@ -1,0 +1,35 @@
+{
+  "editor.formatOnSave": true,
+  "todo-tree.filtering.excludeGlobs": [
+    "**/node_modules/*/**",
+    "**/.expo/*/**",
+    "**/dist/*/**",
+    "**/build/*/**",
+    "**/.next/*/**",
+    "**/coverage/*/**",
+    "**/playwright-report/*/**",
+    "**/test-results/*/**",
+    "**/.swc/*/**"
+  ],
+  "editor.defaultFormatter": "biomejs.biome",
+  "editor.codeActionsOnSave": {
+    "quickfix.biome": "always",
+    "source.organizeImports.biome": "always",
+    "source.fixAll": "always"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  }
+}
