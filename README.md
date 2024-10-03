@@ -12,8 +12,6 @@
     - [bun](#bun)
   - [Usage](#usage)
   - [API](#api)
-    - [getColorNameFromHex](#getcolornamefromhex)
-    - [getRgbaFromHex](#getrgbafromhex)
   - [License](#license)
   - [Contributing](#contributing)
 
@@ -54,23 +52,7 @@ getColorNameFromHex('#FF0000');
 
 ## API
 
-### getColorNameFromHex
-
-```ts
-import { getColorNameFromHex } from '@sillybit/colorhacks';
-
-getColorNameFromHex('#FF0000');
-// returns { hexcode: '#ff0000', colorName: 'Red', isExactMatch: true, shadeHex: '#ff0000', shadeName: 'Red', distance: 0 }
-```
-
-### getRgbaFromHex
-
-```ts
-import { getRgbaFromHex } from '@sillybit/colorhacks';
-
-getRgbaFromHex('#FF0000');
-// returns { rgba: 'rgba(255, 0, 0, 1)', r: 255, g: 0, b: 0, a: 1 }
-```
+For more examples and API details, see the [docs](https://sillybit-io.github.io/colorhacks/).
 
 ## License
 
