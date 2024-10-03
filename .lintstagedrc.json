@@ -2,7 +2,7 @@
   "*.{js,ts,cjs,mjs,d.cts,d.mts,jsx,tsx}": [
     "biome check --apply --no-errors-on-unmatched --diagnostic-level=error"
   ],
-  "*.md": [
+  "!(website)/**/*.md": [
     "markdownlint"
   ]
 }

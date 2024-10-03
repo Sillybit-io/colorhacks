@@ -1,5 +1,5 @@
 {
-  "$schema": "https://biomejs.dev/schemas/1.9.2/schema.json",
+  "$schema": "https://biomejs.dev/schemas/1.9.3/schema.json",
 
   "organizeImports": {
     "enabled": true
@@ -24,7 +24,8 @@
       ".astro",
       "./package.json",
       "./.lintstagedrc.json",
-      "coverage"
+      "coverage",
+      "website"
     ],
     "rules": {
       "recommended": true,
@@ -64,7 +65,8 @@
       ".astro",
       "./package.json",
       "./.lintstagedrc.json",
-      "coverage"
+      "coverage",
+      "website"
     ]
   },
 
@@ -114,7 +116,8 @@
       ".astro",
       "./package.json",
       "./.lintstagedrc.json",
-      "coverage"
+      "coverage",
+      "website"
     ],
     "ignoreUnknown": true
   },
