@@ -1,3 +1,9 @@
+## [1.1.0](https://github.com/sillybit-io/colorhacks/compare/v1.0.0...v1.1.0) (2024-10-04)
+
+### Features
+
+* added more functions for hex, rgb, and color hacks ([9b09df9](https://github.com/sillybit-io/colorhacks/commit/9b09df9f782762c9655894c8747fd061fa894aef))
+
 ## 1.0.0 (2024-10-03)
 
 ### Bug Fixes
