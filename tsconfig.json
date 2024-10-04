@@ -9,7 +9,11 @@
     "strict": true,
     "esModuleInterop": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "paths": {
+      "@features/*": ["src/features/*"],
+      "@utilities/*": ["src/utilities/*"]
+    }
   },
   "include": ["src"]
 }

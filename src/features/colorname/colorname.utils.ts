@@ -1,4 +1,4 @@
-import { getRgbaFromHex } from '../rgb/rgb';
+import { getRgbaFromHex } from '@features/rgb/rgb';
 import type { GetColorNameFromHexOutput } from './colorname.type';
 import { ColorNames } from './colorname.type';
 

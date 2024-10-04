@@ -10,7 +10,7 @@ a: number;
 
 #### Defined in
 
-[rgb/rgb.type.ts:11](https://github.com/Sillybit-io/colorhacks/blob/be6ec2547a222f5e280e5373351fa5f457444a8c/src/features/rgb/rgb.type.ts#L11)
+[rgb/rgb.type.ts:11](https://github.com/Sillybit-io/colorhacks/blob/1141412e2ad2f6a42ef9c6271418b8c6be806b0e/src/features/rgb/rgb.type.ts#L11)
 
 ***
 
@@ -22,7 +22,7 @@ b: number;
 
 #### Defined in
 
-[rgb/rgb.type.ts:10](https://github.com/Sillybit-io/colorhacks/blob/be6ec2547a222f5e280e5373351fa5f457444a8c/src/features/rgb/rgb.type.ts#L10)
+[rgb/rgb.type.ts:10](https://github.com/Sillybit-io/colorhacks/blob/1141412e2ad2f6a42ef9c6271418b8c6be806b0e/src/features/rgb/rgb.type.ts#L10)
 
 ***
 
@@ -34,7 +34,7 @@ g: number;
 
 #### Defined in
 
-[rgb/rgb.type.ts:9](https://github.com/Sillybit-io/colorhacks/blob/be6ec2547a222f5e280e5373351fa5f457444a8c/src/features/rgb/rgb.type.ts#L9)
+[rgb/rgb.type.ts:9](https://github.com/Sillybit-io/colorhacks/blob/1141412e2ad2f6a42ef9c6271418b8c6be806b0e/src/features/rgb/rgb.type.ts#L9)
 
 ***
 
@@ -46,7 +46,7 @@ r: number;
 
 #### Defined in
 
-[rgb/rgb.type.ts:8](https://github.com/Sillybit-io/colorhacks/blob/be6ec2547a222f5e280e5373351fa5f457444a8c/src/features/rgb/rgb.type.ts#L8)
+[rgb/rgb.type.ts:8](https://github.com/Sillybit-io/colorhacks/blob/1141412e2ad2f6a42ef9c6271418b8c6be806b0e/src/features/rgb/rgb.type.ts#L8)
 
 ***
 
@@ -58,4 +58,4 @@ rgba: string;
 
 #### Defined in
 
-[rgb/rgb.type.ts:7](https://github.com/Sillybit-io/colorhacks/blob/be6ec2547a222f5e280e5373351fa5f457444a8c/src/features/rgb/rgb.type.ts#L7)
+[rgb/rgb.type.ts:7](https://github.com/Sillybit-io/colorhacks/blob/1141412e2ad2f6a42ef9c6271418b8c6be806b0e/src/features/rgb/rgb.type.ts#L7)

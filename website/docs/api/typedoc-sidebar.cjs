@@ -49,8 +49,48 @@ const typedocSidebar = { items: [
       },
       {
         "type": "doc",
+        "id": "api/functions/getColorNameFromRgb",
+        "label": "getColorNameFromRgb"
+      },
+      {
+        "type": "doc",
+        "id": "api/functions/getContrastRatio",
+        "label": "getContrastRatio"
+      },
+      {
+        "type": "doc",
+        "id": "api/functions/getContrastRatioWCAG20",
+        "label": "getContrastRatioWCAG20"
+      },
+      {
+        "type": "doc",
+        "id": "api/functions/getHexFromRgb",
+        "label": "getHexFromRgb"
+      },
+      {
+        "type": "doc",
+        "id": "api/functions/getOppositeColor",
+        "label": "getOppositeColor"
+      },
+      {
+        "type": "doc",
         "id": "api/functions/getRgbaFromHex",
         "label": "getRgbaFromHex"
+      },
+      {
+        "type": "doc",
+        "id": "api/functions/isHexColor",
+        "label": "isHexColor"
+      },
+      {
+        "type": "doc",
+        "id": "api/functions/isRgbaColor",
+        "label": "isRgbaColor"
+      },
+      {
+        "type": "doc",
+        "id": "api/functions/isRgbColor",
+        "label": "isRgbColor"
       }
     ]
   }
