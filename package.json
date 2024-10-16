@@ -22,7 +22,7 @@
     "build": "tsup",
     "cm": "cz",
     "clean": "rimraf lib",
-    "lint:md": "markdownlint '**/*.md' --ignore node_modules",
+    "lint:md": "markdownlint '**/*.md' --ignore node_modules --ignore website --ignore CHANGELOG.md",
     "lint": "bun biome check . --diagnostic-level=error",
     "lint:fix": "bun biome check . --fix --diagnostic-level=error",
     "lint:ci": "bun biome ci . --diagnostic-level=error",
