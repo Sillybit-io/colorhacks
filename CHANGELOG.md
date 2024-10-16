@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/sillybit-io/colorhacks/compare/v1.1.0...v1.1.1) (2024-10-16)
+
+### Bug Fixes
+
+* issue on module export ([3c9efad](https://github.com/sillybit-io/colorhacks/commit/3c9efad0ea249a55a2178bbe625091d7660b57ac))
+* md file checks on push ([9a6ed94](https://github.com/sillybit-io/colorhacks/commit/9a6ed94945c96a0ad6f796a03f3e65a601017dda))
+
 ## [1.1.0](https://github.com/sillybit-io/colorhacks/compare/v1.0.0...v1.1.0) (2024-10-04)
 
 ### Features
