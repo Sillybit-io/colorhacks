@@ -1,5 +1,7 @@
+import type { HEX } from '@features/hex/hex.type';
+
 export interface GetRgbaFromHexOptions {
-  hexCode: string;
+  hexCode: HEX;
   alpha?: number;
 }
 

@@ -18,6 +18,21 @@ const typedocSidebar = { items: [
     "items": [
       {
         "type": "doc",
+        "id": "api/interfaces/ColorSet",
+        "label": "ColorSet"
+      },
+      {
+        "type": "doc",
+        "id": "api/interfaces/ExpandedColorTheme",
+        "label": "ExpandedColorTheme"
+      },
+      {
+        "type": "doc",
+        "id": "api/interfaces/GenerateThemeOptions",
+        "label": "GenerateThemeOptions"
+      },
+      {
+        "type": "doc",
         "id": "api/interfaces/GetColorNameFromHexOptions",
         "label": "GetColorNameFromHexOptions"
       },
@@ -35,6 +50,32 @@ const typedocSidebar = { items: [
         "type": "doc",
         "id": "api/interfaces/GetRgbaFromHexOutput",
         "label": "GetRgbaFromHexOutput"
+      },
+      {
+        "type": "doc",
+        "id": "api/interfaces/RegularColorTheme",
+        "label": "RegularColorTheme"
+      }
+    ]
+  },
+  {
+    "type": "category",
+    "label": "Type Aliases",
+    "items": [
+      {
+        "type": "doc",
+        "id": "api/type-aliases/ColorTheme",
+        "label": "ColorTheme"
+      },
+      {
+        "type": "doc",
+        "id": "api/type-aliases/ExpandedColorSet",
+        "label": "ExpandedColorSet"
+      },
+      {
+        "type": "doc",
+        "id": "api/type-aliases/HEX",
+        "label": "HEX"
       }
     ]
   },
@@ -44,8 +85,43 @@ const typedocSidebar = { items: [
     "items": [
       {
         "type": "doc",
+        "id": "api/functions/adjustHexColor",
+        "label": "adjustHexColor"
+      },
+      {
+        "type": "doc",
+        "id": "api/functions/adjustSaturation",
+        "label": "adjustSaturation"
+      },
+      {
+        "type": "doc",
+        "id": "api/functions/checkAccessibility",
+        "label": "checkAccessibility"
+      },
+      {
+        "type": "doc",
+        "id": "api/functions/compareHEXColorsViaHSL",
+        "label": "compareHEXColorsViaHSL"
+      },
+      {
+        "type": "doc",
+        "id": "api/functions/exportThemeToCSS",
+        "label": "exportThemeToCSS"
+      },
+      {
+        "type": "doc",
+        "id": "api/functions/generateTheme",
+        "label": "generateTheme"
+      },
+      {
+        "type": "doc",
         "id": "api/functions/getColorNameFromHex",
         "label": "getColorNameFromHex"
+      },
+      {
+        "type": "doc",
+        "id": "api/functions/getColorNameFromHsl",
+        "label": "getColorNameFromHsl"
       },
       {
         "type": "doc",
@@ -64,8 +140,18 @@ const typedocSidebar = { items: [
       },
       {
         "type": "doc",
+        "id": "api/functions/getHEXfromHSL",
+        "label": "getHEXfromHSL"
+      },
+      {
+        "type": "doc",
         "id": "api/functions/getHexFromRgb",
         "label": "getHexFromRgb"
+      },
+      {
+        "type": "doc",
+        "id": "api/functions/getHSLfromHEX",
+        "label": "getHSLfromHEX"
       },
       {
         "type": "doc",
@@ -84,6 +170,11 @@ const typedocSidebar = { items: [
       },
       {
         "type": "doc",
+        "id": "api/functions/isHSLColor",
+        "label": "isHSLColor"
+      },
+      {
+        "type": "doc",
         "id": "api/functions/isRgbaColor",
         "label": "isRgbaColor"
       },
@@ -91,6 +182,11 @@ const typedocSidebar = { items: [
         "type": "doc",
         "id": "api/functions/isRgbColor",
         "label": "isRgbColor"
+      },
+      {
+        "type": "doc",
+        "id": "api/functions/memoizedGenerateTheme",
+        "label": "memoizedGenerateTheme"
       }
     ]
   }

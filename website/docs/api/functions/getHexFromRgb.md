@@ -34,4 +34,4 @@ getHexFromRgb({ r: 255, g: 0, b: 0 });
 
 ## Defined in
 
-[rgb/rgb.ts:95](https://github.com/Sillybit-io/colorhacks/blob/1141412e2ad2f6a42ef9c6271418b8c6be806b0e/src/features/rgb/rgb.ts#L95)
+[rgb/rgb.ts:111](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/rgb/rgb.ts#L111)

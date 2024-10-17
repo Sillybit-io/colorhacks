@@ -1,3 +1,4 @@
+import type { HEX } from '@features/hex/hex.type';
 import { getRgbaFromHex } from '@features/rgb/rgb';
 import type { GetColorNameFromHexOutput } from './colorname.type';
 import { ColorNames } from './colorname.type';
@@ -69,11 +70,11 @@ export function getClosestMatch(hexCode: string): GetColorNameFromHexOutput {
   let minDistance = Number.POSITIVE_INFINITY;
 
   const colorEntries = Object.entries(ColorNames);
-  const inputRgb = getRgbaFromHex({ hexCode: cleanHex });
+  const inputRgb = getRgbaFromHex({ hexCode: cleanHex as HEX });
 
   // biome-ignore lint/complexity/noForEach: <explanation>
   colorEntries.forEach(([name, hex]) => {
-    const colorRgb = getRgbaFromHex({ hexCode: hex.slice(1) });
+    const colorRgb = getRgbaFromHex({ hexCode: hex.slice(1) as HEX });
     const distance = getColorDistance(inputRgb, colorRgb);
     if (distance < minDistance) {
       minDistance = distance;

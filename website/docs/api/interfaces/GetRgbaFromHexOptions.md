@@ -10,16 +10,16 @@ optional alpha: number;
 
 #### Defined in
 
-[rgb/rgb.type.ts:3](https://github.com/Sillybit-io/colorhacks/blob/1141412e2ad2f6a42ef9c6271418b8c6be806b0e/src/features/rgb/rgb.type.ts#L3)
+[rgb/rgb.type.ts:5](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/rgb/rgb.type.ts#L5)
 
 ***
 
 ### hexCode
 
 ```ts
-hexCode: string;
+hexCode: `#${string}`;
 ```
 
 #### Defined in
 
-[rgb/rgb.type.ts:2](https://github.com/Sillybit-io/colorhacks/blob/1141412e2ad2f6a42ef9c6271418b8c6be806b0e/src/features/rgb/rgb.type.ts#L2)
+[rgb/rgb.type.ts:4](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/rgb/rgb.type.ts#L4)

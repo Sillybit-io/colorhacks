@@ -32,4 +32,4 @@ console.log(ratio); // Outputs: 21
 
 ## Defined in
 
-hacks/hacks.ts:48
+[hacks/hacks.ts:49](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/hacks/hacks.ts#L49)

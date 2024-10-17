@@ -31,9 +31,17 @@ export function getRgbaFromHex({
 
   const cleanHex = hexCode.replace(/^#/, '');
 
-  const r = Number.parseInt(cleanHex.slice(0, 2), 16);
-  const g = Number.parseInt(cleanHex.slice(2, 4), 16);
-  const b = Number.parseInt(cleanHex.slice(4, 6), 16);
+  const fullHex =
+    cleanHex.length === 3
+      ? cleanHex
+          .split('')
+          .map((char) => char + char)
+          .join('')
+      : cleanHex;
+
+  const r = Number.parseInt(fullHex.slice(0, 2), 16);
+  const g = Number.parseInt(fullHex.slice(2, 4), 16);
+  const b = Number.parseInt(fullHex.slice(4, 6), 16);
 
   const clampedAlpha = Math.max(0, Math.min(1, alpha));
 
@@ -50,6 +58,10 @@ export function getRgbaFromHex({
  * Check if a string is a valid RGB color
  * @param rgb - The string to check
  * @returns True if the string is a valid RGB color, false otherwise
+ *
+ * @example
+ * isRgbColor('rgb(255, 0, 0)'); // true
+ * isRgbColor('rgb(256, 0, 0)'); // false
  */
 export function isRgbColor(rgb: string): boolean {
   const rgbRegex = /^rgb\((\d{1,3}),\s*(\d{1,3}),\s*(\d{1,3})\)$/;
@@ -65,6 +77,10 @@ export function isRgbColor(rgb: string): boolean {
  * Check if a string is a valid RGBA color
  * @param rgba - The string to check
  * @returns True if the string is a valid RGBA color, false otherwise
+ *
+ * @example
+ * isRgbaColor('rgba(255, 0, 0, 1)'); // true
+ * isRgbaColor('rgba(256, 0, 0, 1)'); // false
  */
 export function isRgbaColor(rgba: string): boolean {
   const rgbaRegex =
@@ -101,7 +117,7 @@ export function getHexFromRgb({
   g: number;
   b: number;
 }): string {
-  if (r > 255 || g > 255 || b > 255) {
+  if (r < 0 || g < 0 || b < 0 || r > 255 || g > 255 || b > 255) {
     throw new Error(InvalidColorMessage);
   }
 

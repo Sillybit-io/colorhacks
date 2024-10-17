@@ -1,25 +1,18 @@
-export {
-  getRgbaFromHex,
-  isRgbColor,
-  isRgbaColor,
-  getHexFromRgb,
-} from '@features/rgb/rgb';
-export {
-  getColorNameFromHex,
-  getColorNameFromRgb,
-} from '@features/colorname/colorname';
-export type {
-  GetColorNameFromHexOptions,
-  GetColorNameFromHexOutput,
-} from '@features/colorname/colorname.type';
-export type {
-  GetRgbaFromHexOptions,
-  GetRgbaFromHexOutput,
-} from '@features/rgb/rgb.type';
+/*
+ * Export Types
+ */
+export type * from '@features/colorname/colorname.type';
+export type * from '@features/rgb/rgb.type';
 export { ColorNames } from '@features/colorname/colorname.type';
-export {
-  getContrastRatio,
-  getContrastRatioWCAG20,
-  getOppositeColor,
-} from '@features/hacks/hacks';
-export { isHexColor } from '@features/hex/hex';
+export type * from '@features/hex/hex.type';
+export type * from '@features/tailwind/tailwind.type';
+
+/*
+ * Export Functions
+ */
+export * from '@features/rgb/rgb';
+export * from '@features/colorname/colorname';
+export * from '@features/hacks/hacks';
+export * from '@features/hex/hex';
+export * from '@features/tailwind/tailwind';
+export * from '@features/hsl/hsl';

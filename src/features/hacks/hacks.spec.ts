@@ -1,6 +1,8 @@
 import { InvalidColorMessage } from '@utilities/utilities';
 import { describe, expect, it } from 'vitest';
 import {
+  adjustSaturation,
+  checkAccessibility,
   getContrastRatio,
   getContrastRatioWCAG20,
   getOppositeColor,
@@ -132,5 +134,68 @@ describe('color hacks utilities', () => {
       0.12744,
       5,
     );
+  });
+
+  it('should handle edge case for calculateRelativeLuminance', () => {
+    expect(calculateRelativeLuminance({ r: 0, g: 0, b: 0 })).toBe(0);
+  });
+
+  describe('adjustSaturation', () => {
+    it('should decrease saturation for light base colors', () => {
+      const result = adjustSaturation(75, 50, true);
+      expect(result).toBeLessThan(50);
+      expect(result).toBeCloseTo(42.5, 1);
+    });
+
+    it('should increase saturation for dark base colors', () => {
+      const result = adjustSaturation(25, 50, false);
+      expect(result).toBeGreaterThan(50);
+      expect(result).toBeCloseTo(72.5, 1);
+    });
+
+    it('should not exceed 100% saturation', () => {
+      const result = adjustSaturation(0, 90, false);
+      expect(result).toBe(100);
+    });
+
+    it('should not go below 0% saturation', () => {
+      const result = adjustSaturation(100, 10, true);
+      expect(result).toBe(10);
+    });
+
+    it('should use custom saturation factor', () => {
+      const result = adjustSaturation(50, 50, true, 0.5);
+      expect(result).toBeCloseTo(25, 1);
+    });
+  });
+
+  describe('checkAccessibility', () => {
+    it('should return true for high contrast combinations', () => {
+      expect(checkAccessibility('#000000', '#FFFFFF')).toBe(true);
+      expect(checkAccessibility('#FFFFFF', '#000000')).toBe(true);
+    });
+
+    it('should return false for low contrast combinations', () => {
+      expect(checkAccessibility('#777777', '#888888')).toBe(false);
+    });
+
+    it('should return true for combinations meeting WCAG AA standard', () => {
+      expect(checkAccessibility('#1E90FF', '#000000')).toBe(true); // DodgerBlue on Black
+    });
+
+    it('should return false for combinations not meeting WCAG AA standard', () => {
+      expect(checkAccessibility('#FF0000', '#00FF00')).toBe(false); // Red on Green
+    });
+
+    it('should handle invalid hex codes', () => {
+      // @ts-ignore - Intentionally passing invalid hex codes for testing
+      expect(() => checkAccessibility('invalid', '#FFFFFF')).toThrow(
+        InvalidColorMessage,
+      );
+      // @ts-ignore - Intentionally passing invalid hex codes for testing
+      expect(() => checkAccessibility('#FFFFFF', 'invalid')).toThrow(
+        InvalidColorMessage,
+      );
+    });
   });
 });

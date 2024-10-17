@@ -1,6 +1,10 @@
 import { InvalidColorMessage } from '@utilities/utilities';
 import { describe, expect, it, vi } from 'vitest';
-import { getColorNameFromHex, getColorNameFromRgb } from './colorname';
+import {
+  getColorNameFromHex,
+  getColorNameFromHsl,
+  getColorNameFromRgb,
+} from './colorname';
 import {
   formatColorName,
   getClosestMatch,
@@ -134,7 +138,6 @@ describe('colorname utilities', () => {
   });
 
   it('should throw an error if no closest match is found', () => {
-    // Mock Object.entries to return an empty array
     const originalEntries = Object.entries;
     Object.entries = vi.fn().mockReturnValue([]);
 
@@ -142,7 +145,6 @@ describe('colorname utilities', () => {
       'Unable to find closest color match',
     );
 
-    // Restore original Object.entries
     Object.entries = originalEntries;
   });
 
@@ -150,5 +152,54 @@ describe('colorname utilities', () => {
     expect(formatColorName('darkGoldenRod')).toBe('Dark Golden Rod');
     expect(formatColorName('lightBlue')).toBe('Light Blue');
     expect(formatColorName('red')).toBe('Red');
+  });
+
+  describe('getColorNameFromHsl', () => {
+    it('should return the correct color name for an exact match', () => {
+      const result = getColorNameFromHsl({ h: 0, s: 100, l: 50 });
+      expect(result).toEqual({
+        hexcode: '#ff0000',
+        colorName: 'Red',
+        isExactMatch: true,
+        shadeHex: '#ff0000',
+        shadeName: 'Red',
+        distance: 0,
+      });
+    });
+
+    it('should return the closest color name for a non-exact match', () => {
+      const result = getColorNameFromHsl({ h: 1, s: 100, l: 50 });
+      expect(result).toEqual({
+        hexcode: '#ff0400',
+        colorName: 'Red',
+        isExactMatch: false,
+        shadeHex: '#ff0000',
+        shadeName: 'Red',
+        distance: expect.any(Number),
+      });
+      expect(result.distance).toBeGreaterThan(0);
+    });
+
+    it('should handle edge cases', () => {
+      const blackResult = getColorNameFromHsl({ h: 0, s: 0, l: 0 });
+      expect(blackResult.colorName).toBe('Black');
+      expect(blackResult.isExactMatch).toBe(true);
+
+      const whiteResult = getColorNameFromHsl({ h: 0, s: 0, l: 100 });
+      expect(whiteResult.colorName).toBe('White');
+      expect(whiteResult.isExactMatch).toBe(true);
+    });
+
+    it('should throw an error for invalid HSL values', () => {
+      expect(() => getColorNameFromHsl({ h: 361, s: 100, l: 50 })).toThrow(
+        InvalidColorMessage,
+      );
+      expect(() => getColorNameFromHsl({ h: 0, s: 101, l: 50 })).toThrow(
+        InvalidColorMessage,
+      );
+      expect(() => getColorNameFromHsl({ h: 0, s: 100, l: 101 })).toThrow(
+        InvalidColorMessage,
+      );
+    });
   });
 });

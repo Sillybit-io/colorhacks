@@ -1,4 +1,6 @@
+import { getHEXfromHSL } from '@features/hsl/hsl';
 import { getHexFromRgb } from '@features/rgb/rgb';
+import { InvalidColorMessage } from '@utilities/utilities';
 import {
   type GetColorNameFromHexOptions,
   type GetColorNameFromHexOutput,
@@ -65,6 +67,46 @@ export function getColorNameFromRgb({
   g: number;
   b: number;
 }): GetColorNameFromHexOutput {
+  if (r > 255 || g > 255 || b > 255) {
+    throw new Error(InvalidColorMessage);
+  }
   const hexCode = getHexFromRgb({ r, g, b });
+  return getColorNameFromHex({ hexCode });
+}
+
+/**
+ * Retrieves the color name from a given HSL color.
+ *
+ * @param {Object} options - The options for converting HSL to color name.
+ * @param {number} options.h - The hue component of the HSL color (0-360).
+ * @param {number} options.s - The saturation component of the HSL color (0-100).
+ * @param {number} options.l - The lightness component of the HSL color (0-100).
+ * @returns {GetColorNameFromHexOutput} An object containing information about the color:
+ *   - hexcode: The input hex code, normalized to lowercase with '#' prefix.
+ *   - colorName: The name of the closest matching color.
+ *   - isExactMatch: Boolean indicating if an exact match was found.
+ *   - shadeHex: The hex code of the closest matching color.
+ *   - shadeName: The name of the closest matching color (same as colorName).
+ *   - distance: The color distance between the input and the closest match (0 for exact matches).
+ *
+ * @throws {Error} If unable to find a closest color match.
+ *
+ * @example
+ * const result = getColorNameFromHsl({ h: 0, s: 100, l: 50 });
+ * // Returns: { hexcode: '#ff0000', colorName: 'Red', isExactMatch: true, shadeHex: '#ff0000', shadeName: 'Red', distance: 0 }
+ */
+export function getColorNameFromHsl({
+  h,
+  s,
+  l,
+}: {
+  h: number;
+  s: number;
+  l: number;
+}): GetColorNameFromHexOutput {
+  if (h > 360 || s > 100 || l > 100) {
+    throw new Error(InvalidColorMessage);
+  }
+  const hexCode = getHEXfromHSL(h, s, l);
   return getColorNameFromHex({ hexCode });
 }
