@@ -128,9 +128,13 @@ export function exportThemeToCSS(theme: ColorTheme, withRoot = false): string {
     colorSet: ColorSet | ExpandedColorSet,
   ) => {
     for (const [shade, color] of Object.entries(colorSet)) {
-      if (typeof color === 'string' && shade !== 'clarity') {
-        const colorName = getColorNameFromHex({ hexCode: color });
-        css += `  --color-${key}-${shade.toLowerCase()}: ${color}; /* ${colorName} */\n`;
+      if (typeof color === 'string' && shade !== 'tone') {
+        try {
+          const colorName = getColorNameFromHex({ hexCode: color });
+          css += `  --color-${key}-${shade.toLowerCase()}: ${color}; /* ${colorName} */\n`;
+        } catch (error) {
+          css += `  --color-${key}-${shade.toLowerCase()}: ${color};\n`;
+        }
       }
     }
   };

@@ -2,6 +2,7 @@ import { ensureContrast } from '@features/colorScheme/colorScheme';
 import { adjustSaturation, getOppositeColor } from '@features/hacks/hacks';
 import type { HEX } from '@features/hex/hex.type';
 import { getHEXfromHSL, getHSLfromHEX } from '@features/hsl/hsl';
+import { getRgbaFromHex } from '@features/rgb/rgb';
 import type { ColorSet, ExpandedColorSet } from './tailwind.type';
 
 export function generateColorSet(baseColor: HEX): ColorSet {
@@ -24,7 +25,8 @@ export function generateColorSet(baseColor: HEX): ColorSet {
     l > 50 ? Math.max(l - 10, 0) : Math.min(l + 10, 100),
   );
 
-  const clarity = l > 50 ? 'dark' : 'light';
+  const tone = l > 50 ? 'dark' : 'light';
+  const clarity = getRgbaFromHex({ hexCode: baseColor, alpha: 0.2 }).rgba;
   const inverse = getHEXfromHSL((h + 180) % 360, s, 100 - l);
 
   return {
@@ -36,6 +38,7 @@ export function generateColorSet(baseColor: HEX): ColorSet {
     uiContrast,
     active,
     clarity,
+    tone,
     inverse,
   };
 }

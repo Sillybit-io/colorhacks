@@ -29,6 +29,10 @@ export interface GenerateThemeOptions {
  * @property contrastText - The contrast text color
  * @property contrastTextLarge - The contrast text color for large text
  * @property uiContrast - The contrast color for UI elements
+ * @property active - The active color
+ * @property clarity - The clarity of the color
+ * @property tone - The tone of the color
+ * @property inverse - The inverse color
  */
 export interface ColorSet {
   DEFAULT: HEX;
@@ -39,6 +43,7 @@ export interface ColorSet {
   uiContrast: HEX;
   active: HEX;
   clarity: string;
+  tone: 'light' | 'dark';
   inverse: HEX;
 }
 

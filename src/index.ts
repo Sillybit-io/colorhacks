@@ -6,6 +6,8 @@ export type * from '@features/rgb/rgb.type';
 export { ColorNames } from '@features/colorname/colorname.type';
 export type * from '@features/hex/hex.type';
 export type * from '@features/tailwind/tailwind.type';
+export type * from '@features/hsl/hsl.type';
+export type * from '@features/colorScheme/colorScheme.type';
 
 /*
  * Export Functions

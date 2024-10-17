@@ -166,7 +166,8 @@ describe('tailwind', () => {
         expect(colorSet.contrastTextLarge).toBeDefined();
         expect(colorSet.uiContrast).toBeDefined();
         expect(colorSet.active).toBeDefined();
-        expect(colorSet.clarity).toMatch(/^(light|dark)$/);
+        expect(colorSet.clarity).toBeDefined();
+        expect(colorSet.tone).toMatch(/^(light|dark)$/);
         expect(colorSet.inverse).toBeDefined();
       });
 
@@ -186,7 +187,7 @@ describe('tailwind', () => {
         expect(colorSet.DEFAULT).toBe(baseColor);
         expect(colorSet.light).toBe(baseColor);
         expect(colorSet.dark).not.toBe(baseColor);
-        expect(colorSet.clarity).toBe('dark');
+        expect(colorSet.tone).toBe('dark');
       });
 
       it('should handle edge cases (very dark color)', () => {
@@ -196,7 +197,7 @@ describe('tailwind', () => {
         expect(colorSet.DEFAULT).toBe(baseColor);
         expect(colorSet.light).not.toBe(baseColor);
         expect(colorSet.dark).toBe(baseColor);
-        expect(colorSet.clarity).toBe('light');
+        expect(colorSet.tone).toBe('light');
       });
     });
 
