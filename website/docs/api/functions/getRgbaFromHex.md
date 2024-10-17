@@ -37,4 +37,4 @@ getRgbaFromHex({ hexCode: 'invalid' });
 
 ## Defined in
 
-[rgb/rgb.ts:24](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/rgb/rgb.ts#L24)
+[rgb/rgb.ts:24](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/rgb/rgb.ts#L24)

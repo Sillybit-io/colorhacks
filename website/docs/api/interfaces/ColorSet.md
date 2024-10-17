@@ -12,7 +12,7 @@ active: `#${string}`;
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:40](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L40)
+[tailwind/tailwind.type.ts:40](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L40)
 
 ***
 
@@ -24,7 +24,7 @@ clarity: string;
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:41](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L41)
+[tailwind/tailwind.type.ts:41](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L41)
 
 ***
 
@@ -38,7 +38,7 @@ The contrast text color
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:37](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L37)
+[tailwind/tailwind.type.ts:37](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L37)
 
 ***
 
@@ -52,7 +52,7 @@ The contrast text color for large text
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:38](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L38)
+[tailwind/tailwind.type.ts:38](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L38)
 
 ***
 
@@ -66,7 +66,7 @@ The dark color
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:36](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L36)
+[tailwind/tailwind.type.ts:36](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L36)
 
 ***
 
@@ -80,7 +80,7 @@ The default color
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:34](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L34)
+[tailwind/tailwind.type.ts:34](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L34)
 
 ***
 
@@ -92,7 +92,7 @@ inverse: `#${string}`;
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:42](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L42)
+[tailwind/tailwind.type.ts:42](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L42)
 
 ***
 
@@ -106,7 +106,7 @@ The light color
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:35](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L35)
+[tailwind/tailwind.type.ts:35](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L35)
 
 ***
 
@@ -120,4 +120,4 @@ The contrast color for UI elements
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:39](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L39)
+[tailwind/tailwind.type.ts:39](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L39)

@@ -60,6 +60,7 @@ export type ExpandedColorSet = ColorSet &
 
 /**
  * A theme with different color categories for a regular palette
+ * @property brand - The brand color
  * @property primary - The primary color
  * @property secondary - The secondary color
  * @property accent - The accent color
@@ -71,6 +72,7 @@ export type ExpandedColorSet = ColorSet &
  * @property schemeColors - The color scheme colors
  */
 export interface RegularColorTheme {
+  brand: ColorSet;
   primary: ColorSet;
   secondary: ColorSet;
   accent: ColorSet;
@@ -84,6 +86,7 @@ export interface RegularColorTheme {
 
 /**
  * A theme with different color categories for an expanded palette
+ * @property brand - The brand color
  * @property primary - The primary color
  * @property secondary - The secondary color
  * @property accent - The accent color
@@ -95,6 +98,7 @@ export interface RegularColorTheme {
  * @property schemeColors - The color scheme colors
  */
 export interface ExpandedColorTheme {
+  brand: ExpandedColorSet;
   primary: ExpandedColorSet;
   secondary: ExpandedColorSet;
   accent: ExpandedColorSet;
@@ -106,4 +110,14 @@ export interface ExpandedColorTheme {
   schemeColors: HEX[];
 }
 
+/**
+ * A theme with different color categories for a color palette
+ * @property brand - The brand color
+ * @property primary - The primary color
+ * @property secondary - The secondary color
+ * @property accent - The accent color
+ * @property neutral - The neutral color
+ * @property info - The info color
+ * @property success - The success color
+ */
 export type ColorTheme = RegularColorTheme | ExpandedColorTheme;

@@ -36,4 +36,4 @@ console.log(oppositeColor); // Outputs: "#000000"
 
 ## Defined in
 
-[hacks/hacks.ts:20](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/hacks/hacks.ts#L20)
+[hacks/hacks.ts:20](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/hacks/hacks.ts#L20)

@@ -27,4 +27,4 @@ adjustHexColor('#FF0000', 50); // '#FF7F7F'
 
 ## Defined in
 
-[hex/hex.ts:32](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/hex/hex.ts#L32)
+[hex/hex.ts:32](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/hex/hex.ts#L32)

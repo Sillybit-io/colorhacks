@@ -32,4 +32,4 @@ const hex = getHEXfromHSL(0, 100, 50);
 
 ## Defined in
 
-[hsl/hsl.ts:58](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/hsl/hsl.ts#L58)
+[hsl/hsl.ts:58](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/hsl/hsl.ts#L58)

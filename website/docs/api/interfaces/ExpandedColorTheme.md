@@ -14,7 +14,21 @@ The accent color
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:100](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L100)
+[tailwind/tailwind.type.ts:104](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L104)
+
+***
+
+### brand
+
+```ts
+brand: ExpandedColorSet;
+```
+
+The brand color
+
+#### Defined in
+
+[tailwind/tailwind.type.ts:101](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L101)
 
 ***
 
@@ -28,7 +42,7 @@ The error color
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:105](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L105)
+[tailwind/tailwind.type.ts:109](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L109)
 
 ***
 
@@ -42,7 +56,7 @@ The info color
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:102](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L102)
+[tailwind/tailwind.type.ts:106](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L106)
 
 ***
 
@@ -56,7 +70,7 @@ The neutral color
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:101](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L101)
+[tailwind/tailwind.type.ts:105](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L105)
 
 ***
 
@@ -70,7 +84,7 @@ The primary color
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:98](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L98)
+[tailwind/tailwind.type.ts:102](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L102)
 
 ***
 
@@ -84,7 +98,7 @@ The color scheme colors
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:106](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L106)
+[tailwind/tailwind.type.ts:110](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L110)
 
 ***
 
@@ -98,7 +112,7 @@ The secondary color
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:99](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L99)
+[tailwind/tailwind.type.ts:103](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L103)
 
 ***
 
@@ -112,7 +126,7 @@ The success color
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:103](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L103)
+[tailwind/tailwind.type.ts:107](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L107)
 
 ***
 
@@ -126,4 +140,4 @@ The warning color
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:104](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/tailwind/tailwind.type.ts#L104)
+[tailwind/tailwind.type.ts:108](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L108)

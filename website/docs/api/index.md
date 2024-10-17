@@ -23,7 +23,7 @@
 
 | Type alias | Description |
 | ------ | ------ |
-| [ColorTheme](type-aliases/ColorTheme.md) | - |
+| [ColorTheme](type-aliases/ColorTheme.md) | A theme with different color categories for a color palette |
 | [ExpandedColorSet](type-aliases/ExpandedColorSet.md) | An expanded color set with shades from 50 to 900 |
 | [HEX](type-aliases/HEX.md) | - |
 

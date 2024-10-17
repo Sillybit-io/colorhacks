@@ -10,7 +10,7 @@ colorName: string;
 
 #### Defined in
 
-[colorname/colorname.type.ts:1690](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/colorname/colorname.type.ts#L1690)
+[colorname/colorname.type.ts:1690](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/colorname/colorname.type.ts#L1690)
 
 ***
 
@@ -22,7 +22,7 @@ distance: number;
 
 #### Defined in
 
-[colorname/colorname.type.ts:1694](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/colorname/colorname.type.ts#L1694)
+[colorname/colorname.type.ts:1694](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/colorname/colorname.type.ts#L1694)
 
 ***
 
@@ -34,7 +34,7 @@ hexcode: string;
 
 #### Defined in
 
-[colorname/colorname.type.ts:1689](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/colorname/colorname.type.ts#L1689)
+[colorname/colorname.type.ts:1689](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/colorname/colorname.type.ts#L1689)
 
 ***
 
@@ -46,7 +46,7 @@ isExactMatch: boolean;
 
 #### Defined in
 
-[colorname/colorname.type.ts:1691](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/colorname/colorname.type.ts#L1691)
+[colorname/colorname.type.ts:1691](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/colorname/colorname.type.ts#L1691)
 
 ***
 
@@ -58,7 +58,7 @@ shadeHex: string;
 
 #### Defined in
 
-[colorname/colorname.type.ts:1692](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/colorname/colorname.type.ts#L1692)
+[colorname/colorname.type.ts:1692](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/colorname/colorname.type.ts#L1692)
 
 ***
 
@@ -70,4 +70,4 @@ shadeName: string;
 
 #### Defined in
 
-[colorname/colorname.type.ts:1693](https://github.com/Sillybit-io/colorhacks/blob/fb76eb3f8201e2f6e24d5eb200be883dc1c98169/src/features/colorname/colorname.type.ts#L1693)
+[colorname/colorname.type.ts:1693](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/colorname/colorname.type.ts#L1693)

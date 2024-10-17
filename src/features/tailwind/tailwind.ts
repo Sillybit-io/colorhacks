@@ -42,6 +42,7 @@ export function generateTheme({
 
   if (expandPalette) {
     const theme: ExpandedColorTheme = {
+      brand: generateExpandedColorSet(baseColor),
       primary: generateExpandedColorSet(areas.primary),
       secondary: generateExpandedColorSet(areas.secondary),
       accent: generateExpandedColorSet(areas.accent),
@@ -64,6 +65,7 @@ export function generateTheme({
   }
 
   const theme: RegularColorTheme = {
+    brand: generateColorSet(baseColor),
     primary: generateColorSet(areas.primary),
     secondary: generateColorSet(areas.secondary),
     accent: generateColorSet(areas.accent),
