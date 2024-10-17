@@ -50,6 +50,21 @@ getColorNameFromHex('#FF0000');
 // returns { hexcode: '#ff0000', colorName: 'Red', isExactMatch: true, shadeHex: '#ff0000', shadeName: 'Red', distance: 0 }
 ```
 
+```ts
+import { generateTheme } from '@sillybit/colorhacks';
+
+generateTheme({
+  baseColor: '#FF0000',
+  expandPalette: true,
+  colorScheme: 'complementary',
+  infoHue: 200,
+  successHue: 120,
+  warningHue: 40,
+  errorHue: 0,
+});
+// returns { brand: { ... }, primary: { ... }, secondary: { ... }, accent: { ... }, neutral: { ... }, info: { ... }, success: { ... }, warning: { ... }, error: { ... }, schemeColors: [ ... ] }
+```
+
 ## API
 
 For more examples and API details, see the [docs](https://sillybit-io.github.io/colorhacks/).
