@@ -1,3 +1,9 @@
+## [1.2.0](https://github.com/sillybit-io/colorhacks/compare/v1.1.1...v1.2.0) (2024-10-17)
+
+### Features
+
+* hsl, tailwind and color scheme features are added ([c96efc4](https://github.com/sillybit-io/colorhacks/commit/c96efc4bbc7ebf72ba2853b5a2ab8d689ab761e2))
+
 ## [1.1.1](https://github.com/sillybit-io/colorhacks/compare/v1.1.0...v1.1.1) (2024-10-16)
 
 ### Bug Fixes
