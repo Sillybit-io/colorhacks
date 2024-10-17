@@ -1,3 +1,9 @@
+## [1.3.0](https://github.com/sillybit-io/colorhacks/compare/v1.2.0...v1.3.0) (2024-10-17)
+
+### Features
+
+* need to trigger new release :) ([9ad2e59](https://github.com/sillybit-io/colorhacks/commit/9ad2e599eeaacb27e0298c947429bbade6ca90c7))
+
 ## [1.2.0](https://github.com/sillybit-io/colorhacks/compare/v1.1.1...v1.2.0) (2024-10-17)
 
 ### Features
