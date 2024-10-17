@@ -1,3 +1,9 @@
+## [1.3.1](https://github.com/sillybit-io/colorhacks/compare/v1.3.0...v1.3.1) (2024-10-17)
+
+### Bug Fixes
+
+* tone and clarity data was conflicted ([bb04d6e](https://github.com/sillybit-io/colorhacks/commit/bb04d6e6c3751935633086842873e0b6d0777795))
+
 ## [1.3.0](https://github.com/sillybit-io/colorhacks/compare/v1.2.0...v1.3.0) (2024-10-17)
 
 ### Features
