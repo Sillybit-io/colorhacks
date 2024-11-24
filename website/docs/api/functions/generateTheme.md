@@ -1,37 +1,51 @@
 # generateTheme()
 
 ```ts
-function generateTheme(options): RegularColorTheme | ExpandedColorTheme
+function generateTheme<T>(options): ThemeType<T>
 ```
 
-Generates a theme based on the given options.
+Generates a color theme based on the provided options
+
+## Type Parameters
+
+| Type Parameter | Default type | Description |
+| ------ | ------ | ------ |
+| `T` *extends* `boolean` | `false` | Boolean type parameter that determines if the theme palette should be expanded |
 
 ## Parameters
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `options` | [`GenerateThemeOptions`](../interfaces/GenerateThemeOptions.md) | The options for generating the theme. |
+| `options` | [`GenerateThemeOptions`](../interfaces/GenerateThemeOptions.md)\<`T`\> | The options for generating the theme |
 
 ## Returns
 
-[`RegularColorTheme`](../interfaces/RegularColorTheme.md) \| [`ExpandedColorTheme`](../interfaces/ExpandedColorTheme.md)
+[`ThemeType`](../type-aliases/ThemeType.md)\<`T`\>
 
-The generated theme.
+A complete color theme with all color variations
 
 ## Example
 
 ```ts
-const theme = generateTheme({
-  baseColor: '#ff0000',
-  expandPalette: true,
-  colorScheme: 'complementary',
-  infoHue: 200,
-  successHue: 120,
-  warningHue: 40,
-  errorHue: 0
+// Generate a regular theme
+const regularTheme = generateTheme({
+  baseColor: '#3498db'
 });
+
+console.log(regularTheme.brand.active);
+// Please check ColorSet type for more information
+
+// Generate an expanded theme
+const expandedTheme = generateTheme({
+  baseColor: '#3498db',
+  expandPalette: true,
+  colorScheme: 'analogous'
+});
+
+console.log(expandedTheme.brand.palette[500]);
+// Please check ExpandedColorSet type for more information
 ```
 
 ## Defined in
 
-[tailwind/tailwind.ts:31](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.ts#L31)
+[tailwind/tailwind.ts:48](https://github.com/Sillybit-io/colorhacks/blob/45b74b39d6ded2b71f4a5f8bced67fd323e8e403/src/features/tailwind/tailwind.ts#L48)

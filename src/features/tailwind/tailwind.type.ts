@@ -2,18 +2,48 @@ import type { ColorSchemeType } from '@features/colorScheme/colorScheme.type';
 import type { HEX } from '@features/hex/hex.type';
 
 /**
- * Options for the theme generation
- * @property baseColor - The base color
- * @property expandPalette - Whether to expand the palette
- * @property colorScheme - The color scheme
- * @property infoHue - The hue for the info color
- * @property successHue - The hue for the success color
- * @property warningHue - The hue for the warning color
- * @property errorHue - The hue for the error color
+ * A theme type that varies based on the expandPalette boolean parameter
+ *
+ * @template T - Boolean type parameter that determines if the theme is expanded
+ * @returns {ExpandedColorTheme | RegularColorTheme} Returns ExpandedColorTheme if T is true, otherwise RegularColorTheme
+ *
+ * @example
+ * // Regular theme
+ * type RegularTheme = ThemeType<false>;
+ *
+ * // Expanded theme
+ * type ExpandedTheme = ThemeType<true>;
  */
-export interface GenerateThemeOptions {
+export type ThemeType<T extends boolean> = T extends true
+  ? ExpandedColorTheme
+  : RegularColorTheme;
+
+/**
+ * Options for generating a color theme
+ *
+ * @template T - Boolean type parameter that determines if the theme palette should be expanded
+ * @property {HEX} baseColor - The base color to generate the theme from
+ * @property {T} [expandPalette] - Whether to generate an expanded palette with additional shades
+ * @property {ColorSchemeType} [colorScheme='complementary'] - The type of color scheme to generate
+ * @property {number} [infoHue=200] - The hue value for info colors
+ * @property {number} [successHue=120] - The hue value for success colors
+ * @property {number} [warningHue=40] - The hue value for warning colors
+ * @property {number} [errorHue=0] - The hue value for error colors
+ *
+ * @example
+ * const options: GenerateThemeOptions = {
+ *   baseColor: '#ff0000',
+ *   expandPalette: true,
+ *   colorScheme: 'complementary',
+ *   infoHue: 200,
+ *   successHue: 120,
+ *   warningHue: 40,
+ *   errorHue: 0
+ * };
+ */
+export interface GenerateThemeOptions<T extends boolean = false> {
   baseColor: HEX;
-  expandPalette?: boolean;
+  expandPalette?: T;
   colorScheme?: ColorSchemeType;
   infoHue?: number;
   successHue?: number;
@@ -60,8 +90,11 @@ export interface ColorSet {
  * @property 800 - The 800 shade
  * @property 900 - The 900 shade
  */
-export type ExpandedColorSet = ColorSet &
-  Record<50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900, HEX>;
+export interface ExpandedColorSet extends ColorSet {
+  palette: {
+    [key in `${50 | 100 | 200 | 300 | 400 | 500 | 600 | 700 | 800 | 900}`]: HEX;
+  };
+}
 
 /**
  * A theme with different color categories for a regular palette

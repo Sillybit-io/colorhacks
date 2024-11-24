@@ -65,6 +65,6 @@ export function generateExpandedColorSet(baseColor: HEX): ExpandedColorSet {
 
   return {
     ...baseSet,
-    ...shades,
+    palette: shades,
   };
 }

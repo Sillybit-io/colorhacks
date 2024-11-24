@@ -27,4 +27,4 @@ isHSLColor('rgb(255, 255, 0)'); // false
 
 ## Defined in
 
-[hsl/hsl.ts:82](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/hsl/hsl.ts#L82)
+[hsl/hsl.ts:82](https://github.com/Sillybit-io/colorhacks/blob/45b74b39d6ded2b71f4a5f8bced67fd323e8e403/src/features/hsl/hsl.ts#L82)

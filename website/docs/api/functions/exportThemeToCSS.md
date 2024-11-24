@@ -4,20 +4,20 @@
 function exportThemeToCSS(theme, withRoot): string
 ```
 
-Exports the theme to CSS.
+Exports the theme to CSS Variables
 
 ## Parameters
 
 | Parameter | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
-| `theme` | [`ColorTheme`](../type-aliases/ColorTheme.md) | `undefined` | The theme to export. |
-| `withRoot` | `boolean` | `false` | Whether to include the root selector. |
+| `theme` | [`ColorTheme`](../type-aliases/ColorTheme.md) | `undefined` | The theme to export |
+| `withRoot` | `boolean` | `false` | Whether to include the root selector |
 
 ## Returns
 
 `string`
 
-The CSS for the theme.
+The CSS for the theme
 
 ## Example
 
@@ -29,4 +29,4 @@ exportThemeToCSS(theme);
 
 ## Defined in
 
-[tailwind/tailwind.ts:123](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.ts#L123)
+[tailwind/tailwind.ts:140](https://github.com/Sillybit-io/colorhacks/blob/45b74b39d6ded2b71f4a5f8bced67fd323e8e403/src/features/tailwind/tailwind.ts#L140)

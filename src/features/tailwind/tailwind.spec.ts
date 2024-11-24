@@ -28,15 +28,15 @@ describe('tailwind', () => {
     });
 
     it('should use expandPalette when set to true', () => {
-      const options: GenerateThemeOptions = {
+      const options: GenerateThemeOptions<true> = {
         baseColor: '#3498db',
         expandPalette: true,
       };
       const theme = generateTheme(options);
 
-      if ('50' in theme.primary) {
-        expect(theme.primary[50]).toBeDefined();
-        expect(theme.primary[900]).toBeDefined();
+      if ('palette' in theme.primary) {
+        expect(theme.primary.palette[50]).toBeDefined();
+        expect(theme.primary.palette[900]).toBeDefined();
       } else {
         throw new Error(
           'Expected expanded color set, but got regular color set',
@@ -208,16 +208,16 @@ describe('tailwind', () => {
 
         expect(expandedColorSet).toBeDefined();
         expect(expandedColorSet.DEFAULT).toBe(baseColor);
-        expect(expandedColorSet[50]).toBeDefined();
-        expect(expandedColorSet[100]).toBeDefined();
-        expect(expandedColorSet[200]).toBeDefined();
-        expect(expandedColorSet[300]).toBeDefined();
-        expect(expandedColorSet[400]).toBeDefined();
-        expect(expandedColorSet[500]).toBe(baseColor);
-        expect(expandedColorSet[600]).toBeDefined();
-        expect(expandedColorSet[700]).toBeDefined();
-        expect(expandedColorSet[800]).toBeDefined();
-        expect(expandedColorSet[900]).toBeDefined();
+        expect(expandedColorSet.palette[50]).toBeDefined();
+        expect(expandedColorSet.palette[100]).toBeDefined();
+        expect(expandedColorSet.palette[200]).toBeDefined();
+        expect(expandedColorSet.palette[300]).toBeDefined();
+        expect(expandedColorSet.palette[400]).toBeDefined();
+        expect(expandedColorSet.palette[500]).toBe(baseColor);
+        expect(expandedColorSet.palette[600]).toBeDefined();
+        expect(expandedColorSet.palette[700]).toBeDefined();
+        expect(expandedColorSet.palette[800]).toBeDefined();
+        expect(expandedColorSet.palette[900]).toBeDefined();
       });
 
       it('should include all properties from ColorSet', () => {
@@ -240,9 +240,9 @@ describe('tailwind', () => {
         ] as const;
         for (let i = 0; i < shades.length - 1; i++) {
           // @ts-ignore
-          const currentShade = expandedColorSet[shades[i]];
+          const currentShade = expandedColorSet.palette[shades[i]];
           // @ts-ignore
-          const nextShade = expandedColorSet[shades[i + 1]];
+          const nextShade = expandedColorSet.palette[shades[i + 1]];
           expect(currentShade).not.toBe(nextShade);
         }
       });

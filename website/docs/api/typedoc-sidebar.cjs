@@ -18,8 +18,18 @@ const typedocSidebar = { items: [
     "items": [
       {
         "type": "doc",
+        "id": "api/interfaces/ColorScheme",
+        "label": "ColorScheme"
+      },
+      {
+        "type": "doc",
         "id": "api/interfaces/ColorSet",
         "label": "ColorSet"
+      },
+      {
+        "type": "doc",
+        "id": "api/interfaces/ExpandedColorSet",
+        "label": "ExpandedColorSet"
       },
       {
         "type": "doc",
@@ -64,18 +74,28 @@ const typedocSidebar = { items: [
     "items": [
       {
         "type": "doc",
+        "id": "api/type-aliases/ColorSchemeType",
+        "label": "ColorSchemeType"
+      },
+      {
+        "type": "doc",
         "id": "api/type-aliases/ColorTheme",
         "label": "ColorTheme"
       },
       {
         "type": "doc",
-        "id": "api/type-aliases/ExpandedColorSet",
-        "label": "ExpandedColorSet"
+        "id": "api/type-aliases/HEX",
+        "label": "HEX"
       },
       {
         "type": "doc",
-        "id": "api/type-aliases/HEX",
-        "label": "HEX"
+        "id": "api/type-aliases/HSL",
+        "label": "HSL"
+      },
+      {
+        "type": "doc",
+        "id": "api/type-aliases/ThemeType",
+        "label": "ThemeType"
       }
     ]
   },

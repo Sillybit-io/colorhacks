@@ -27,4 +27,4 @@ isRgbColor('rgb(256, 0, 0)'); // false
 
 ## Defined in
 
-[rgb/rgb.ts:66](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/rgb/rgb.ts#L66)
+[rgb/rgb.ts:66](https://github.com/Sillybit-io/colorhacks/blob/45b74b39d6ded2b71f4a5f8bced67fd323e8e403/src/features/rgb/rgb.ts#L66)

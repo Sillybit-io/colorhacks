@@ -8,35 +8,52 @@ import type {
   ExpandedColorTheme,
   GenerateThemeOptions,
   RegularColorTheme,
+  ThemeType,
 } from './tailwind.type';
 import { generateColorSet, generateExpandedColorSet } from './tailwind.utils';
 
 /**
- * Generates a theme based on the given options.
+ * Generates a color theme based on the provided options
  *
- * @param {GenerateThemeOptions} options - The options for generating the theme.
- * @returns {RegularColorTheme | ExpandedColorTheme} The generated theme.
+ * @template T - Boolean type parameter that determines if the theme palette should be expanded
+ * @param {GenerateThemeOptions<T>} options - The options for generating the theme
+ * @param {HEX} options.baseColor - The base color to generate the theme from
+ * @param {T} [options.expandPalette=false] - Whether to generate an expanded palette with additional shades
+ * @param {ColorSchemeType} [options.colorScheme='complementary'] - The type of color scheme to generate
+ * @param {number} [options.infoHue=200] - The hue value for info colors
+ * @param {number} [options.successHue=120] - The hue value for success colors
+ * @param {number} [options.warningHue=40] - The hue value for warning colors
+ * @param {number} [options.errorHue=0] - The hue value for error colors
+ * @returns {ThemeType<T>} A complete color theme with all color variations
  *
  * @example
- * const theme = generateTheme({
- *   baseColor: '#ff0000',
- *   expandPalette: true,
- *   colorScheme: 'complementary',
- *   infoHue: 200,
- *   successHue: 120,
- *   warningHue: 40,
- *   errorHue: 0
+ * // Generate a regular theme
+ * const regularTheme = generateTheme({
+ *   baseColor: '#3498db'
  * });
+ *
+ * console.log(regularTheme.brand.active);
+ * // Please check ColorSet type for more information
+ *
+ * // Generate an expanded theme
+ * const expandedTheme = generateTheme({
+ *   baseColor: '#3498db',
+ *   expandPalette: true,
+ *   colorScheme: 'analogous'
+ * });
+ *
+ * console.log(expandedTheme.brand.palette[500]);
+ * // Please check ExpandedColorSet type for more information
  */
-export function generateTheme({
+export function generateTheme<T extends boolean = false>({
   baseColor,
-  expandPalette = false,
+  expandPalette = false as T,
   colorScheme = 'complementary',
   infoHue = 200,
   successHue = 120,
   warningHue = 40,
   errorHue = 0,
-}: GenerateThemeOptions): RegularColorTheme | ExpandedColorTheme {
+}: GenerateThemeOptions<T>): ThemeType<T> {
   const { colors, areas } = generateColorScheme(baseColor, colorScheme);
   const [baseH] = getHSLfromHEX(baseColor);
 
@@ -61,7 +78,7 @@ export function generateTheme({
       ),
       schemeColors: colors,
     };
-    return theme;
+    return theme as ThemeType<T>;
   }
 
   const theme: RegularColorTheme = {
@@ -80,7 +97,7 @@ export function generateTheme({
     error: generateColorSet(getHEXfromHSL((baseH + errorHue) % 360, 70, 50)),
     schemeColors: colors,
   };
-  return theme;
+  return theme as ThemeType<T>;
 }
 
 /**
@@ -109,11 +126,11 @@ export const memoizedGenerateTheme = (() => {
 })();
 
 /**
- * Exports the theme to CSS.
+ * Exports the theme to CSS Variables
  *
- * @param {ColorTheme} theme - The theme to export.
- * @param {boolean} withRoot - Whether to include the root selector.
- * @returns {string} The CSS for the theme.
+ * @param {ColorTheme} theme - The theme to export
+ * @param {boolean} withRoot - Whether to include the root selector
+ * @returns {string} The CSS for the theme
  *
  * @example
  * const theme = generateTheme({ baseColor: '#ff0000', expandPalette: true });

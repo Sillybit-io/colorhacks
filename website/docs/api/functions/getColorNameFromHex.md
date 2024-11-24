@@ -37,4 +37,4 @@ const result = getColorNameFromHex({ hexCode: '#FF0000' });
 
 ## Defined in
 
-[colorname/colorname.ts:29](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/colorname/colorname.ts#L29)
+[colorname/colorname.ts:29](https://github.com/Sillybit-io/colorhacks/blob/45b74b39d6ded2b71f4a5f8bced67fd323e8e403/src/features/colorname/colorname.ts#L29)

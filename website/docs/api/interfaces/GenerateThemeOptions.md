@@ -1,6 +1,26 @@
-# GenerateThemeOptions
+# GenerateThemeOptions\<T\>
 
-Options for the theme generation
+Options for generating a color theme
+
+## Example
+
+```ts
+const options: GenerateThemeOptions = {
+  baseColor: '#ff0000',
+  expandPalette: true,
+  colorScheme: 'complementary',
+  infoHue: 200,
+  successHue: 120,
+  warningHue: 40,
+  errorHue: 0
+};
+```
+
+## Type Parameters
+
+| Type Parameter | Default type | Description |
+| ------ | ------ | ------ |
+| `T` *extends* `boolean` | `false` | Boolean type parameter that determines if the theme palette should be expanded |
 
 ## Properties
 
@@ -10,11 +30,11 @@ Options for the theme generation
 baseColor: `#${string}`;
 ```
 
-The base color
+The base color to generate the theme from
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:15](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L15)
+[tailwind/tailwind.type.ts:45](https://github.com/Sillybit-io/colorhacks/blob/45b74b39d6ded2b71f4a5f8bced67fd323e8e403/src/features/tailwind/tailwind.type.ts#L45)
 
 ***
 
@@ -24,11 +44,11 @@ The base color
 optional colorScheme: ColorSchemeType;
 ```
 
-The color scheme
+The type of color scheme to generate
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:17](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L17)
+[tailwind/tailwind.type.ts:47](https://github.com/Sillybit-io/colorhacks/blob/45b74b39d6ded2b71f4a5f8bced67fd323e8e403/src/features/tailwind/tailwind.type.ts#L47)
 
 ***
 
@@ -38,25 +58,25 @@ The color scheme
 optional errorHue: number;
 ```
 
-The hue for the error color
+The hue value for error colors
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:21](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L21)
+[tailwind/tailwind.type.ts:51](https://github.com/Sillybit-io/colorhacks/blob/45b74b39d6ded2b71f4a5f8bced67fd323e8e403/src/features/tailwind/tailwind.type.ts#L51)
 
 ***
 
 ### expandPalette?
 
 ```ts
-optional expandPalette: boolean;
+optional expandPalette: T;
 ```
 
-Whether to expand the palette
+Whether to generate an expanded palette with additional shades
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:16](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L16)
+[tailwind/tailwind.type.ts:46](https://github.com/Sillybit-io/colorhacks/blob/45b74b39d6ded2b71f4a5f8bced67fd323e8e403/src/features/tailwind/tailwind.type.ts#L46)
 
 ***
 
@@ -66,11 +86,11 @@ Whether to expand the palette
 optional infoHue: number;
 ```
 
-The hue for the info color
+The hue value for info colors
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:18](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L18)
+[tailwind/tailwind.type.ts:48](https://github.com/Sillybit-io/colorhacks/blob/45b74b39d6ded2b71f4a5f8bced67fd323e8e403/src/features/tailwind/tailwind.type.ts#L48)
 
 ***
 
@@ -80,11 +100,11 @@ The hue for the info color
 optional successHue: number;
 ```
 
-The hue for the success color
+The hue value for success colors
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:19](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L19)
+[tailwind/tailwind.type.ts:49](https://github.com/Sillybit-io/colorhacks/blob/45b74b39d6ded2b71f4a5f8bced67fd323e8e403/src/features/tailwind/tailwind.type.ts#L49)
 
 ***
 
@@ -94,8 +114,8 @@ The hue for the success color
 optional warningHue: number;
 ```
 
-The hue for the warning color
+The hue value for warning colors
 
 #### Defined in
 
-[tailwind/tailwind.type.ts:20](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.type.ts#L20)
+[tailwind/tailwind.type.ts:50](https://github.com/Sillybit-io/colorhacks/blob/45b74b39d6ded2b71f4a5f8bced67fd323e8e403/src/features/tailwind/tailwind.type.ts#L50)

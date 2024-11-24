@@ -10,7 +10,7 @@ Memoized version of generateTheme to improve performance for repeated calls with
 
 | Parameter | Type | Description |
 | ------ | ------ | ------ |
-| `options` | [`GenerateThemeOptions`](../interfaces/GenerateThemeOptions.md) | The options for generating the theme. |
+| `options` | [`GenerateThemeOptions`](../interfaces/GenerateThemeOptions.md)\<`false`\> | The options for generating the theme. |
 
 ## Returns
 
@@ -29,4 +29,4 @@ console.log(theme1 === theme2); // true
 
 ## Defined in
 
-[tailwind/tailwind.ts:100](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/tailwind/tailwind.ts#L100)
+[tailwind/tailwind.ts:117](https://github.com/Sillybit-io/colorhacks/blob/45b74b39d6ded2b71f4a5f8bced67fd323e8e403/src/features/tailwind/tailwind.ts#L117)

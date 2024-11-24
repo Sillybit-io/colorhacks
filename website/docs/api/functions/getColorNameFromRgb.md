@@ -40,4 +40,4 @@ const result = getColorNameFromRgb({ r: 255, g: 0, b: 0 });
 
 ## Defined in
 
-[colorname/colorname.ts:61](https://github.com/Sillybit-io/colorhacks/blob/9a1a410a2ab3d0d5aa1082a1583a18ba63dd35e8/src/features/colorname/colorname.ts#L61)
+[colorname/colorname.ts:61](https://github.com/Sillybit-io/colorhacks/blob/45b74b39d6ded2b71f4a5f8bced67fd323e8e403/src/features/colorname/colorname.ts#L61)
