@@ -1,3 +1,9 @@
+## [1.4.0](https://github.com/sillybit-io/colorhacks/compare/v1.3.1...v1.4.0) (2024-11-24)
+
+### Features
+
+* separated css variables export and css code export ([4e52d4b](https://github.com/sillybit-io/colorhacks/commit/4e52d4bac5267ad50c835c22afaadd0e07d7b2b2))
+
 ## [1.3.1](https://github.com/sillybit-io/colorhacks/compare/v1.3.0...v1.3.1) (2024-10-17)
 
 ### Bug Fixes
