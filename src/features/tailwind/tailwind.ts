@@ -126,19 +126,18 @@ export const memoizedGenerateTheme = (() => {
 })();
 
 /**
- * Exports the theme to CSS Variables
+ * Exports the theme to CSS Variables on the root element
  *
  * @param {ColorTheme} theme - The theme to export
- * @param {boolean} withRoot - Whether to include the root selector
- * @returns {string} The CSS for the theme
+ * @returns {string[]} The CSS code for the theme
  *
  * @example
  * const theme = generateTheme({ baseColor: '#ff0000', expandPalette: true });
- * exportThemeToCSS(theme);
- * // returns '--color-primary-500: #ff0000;'
+ * exportThemeToCSSVariablesOnly(theme);
+ * // returns ['--color-primary-500: #ff0000;']
  */
-export function exportThemeToCSS(theme: ColorTheme, withRoot = false): string {
-  let css = withRoot ? ':root {\n' : '';
+export function exportThemeToCSSVariablesOnly(theme: ColorTheme): string[] {
+  const cssVariables: string[] = [];
 
   const processColorSet = (
     key: string,
@@ -148,9 +147,13 @@ export function exportThemeToCSS(theme: ColorTheme, withRoot = false): string {
       if (typeof color === 'string' && shade !== 'tone') {
         try {
           const colorName = getColorNameFromHex({ hexCode: color });
-          css += `  --color-${key}-${shade.toLowerCase()}: ${color}; /* ${colorName} */\n`;
+          cssVariables.push(
+            `--color-${key}-${shade.toLowerCase()}: ${color}; /* ${colorName.colorName} */\n`,
+          );
         } catch (error) {
-          css += `  --color-${key}-${shade.toLowerCase()}: ${color};\n`;
+          cssVariables.push(
+            `--color-${key}-${shade.toLowerCase()}: ${color};\n`,
+          );
         }
       }
     }
@@ -162,6 +165,23 @@ export function exportThemeToCSS(theme: ColorTheme, withRoot = false): string {
     }
   }
 
-  css += withRoot ? '}' : '';
+  return cssVariables;
+}
+
+/**
+ * Exports the theme to CSS Variables on the root element
+ *
+ * @param {ColorTheme} theme - The theme to export
+ * @returns {string} The CSS code for the theme
+ *
+ * @example
+ * const theme = generateTheme({ baseColor: '#ff0000', expandPalette: true });
+ * exportThemeToCSS(theme);
+ * // returns ':root { --color-primary-500: #ff0000; }'
+ */
+export function exportThemeToCSS(theme: ColorTheme): string {
+  let css = ':root {\n';
+  css += exportThemeToCSSVariablesOnly(theme).join('  ');
+  css += '}';
   return css;
 }

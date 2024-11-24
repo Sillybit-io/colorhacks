@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import {
   exportThemeToCSS,
+  exportThemeToCSSVariablesOnly,
   generateTheme,
   memoizedGenerateTheme,
 } from './tailwind';
@@ -133,12 +134,12 @@ describe('tailwind', () => {
       expect(css).toContain('--color-primary-default:');
       expect(css).toContain('--color-secondary-light:');
       expect(css).toContain('--color-accent-dark:');
-      expect(css).not.toContain(':root {');
+      expect(css).toContain(':root {');
     });
 
-    it('should include :root when withRoot is true', () => {
+    it('should include :root', () => {
       const theme = generateTheme({ baseColor: '#3498db' });
-      const css = exportThemeToCSS(theme, true);
+      const css = exportThemeToCSS(theme);
 
       expect(css).toContain(':root {');
       expect(css).toContain('}');
@@ -149,6 +150,19 @@ describe('tailwind', () => {
       const css = exportThemeToCSS(theme);
 
       expect(css).toMatch(/\/\* .+ \*\//);
+    });
+  });
+
+  describe('exportThemeToCSSVariablesOnly', () => {
+    it('should generate CSS variables', () => {
+      const theme = generateTheme({ baseColor: '#3498db' });
+      const css = exportThemeToCSSVariablesOnly(theme);
+
+      expect(css).toContain(
+        '--color-brand-light: #8bc4ea; /* Water Splash */\n',
+      );
+      expect(css).toContain('--color-secondary-dark: #000000; /* Black */\n');
+      expect(css).toContain('--color-info-clarity: rgba(217, 169, 38, 0.2);\n');
     });
   });
 
