@@ -1,3 +1,9 @@
+## [1.4.1](https://github.com/sillybit-io/colorhacks/compare/v1.4.0...v1.4.1) (2024-11-29)
+
+### Bug Fixes
+
+* color fixes on tailwind theme ([a4da174](https://github.com/sillybit-io/colorhacks/commit/a4da1746df6f853a511b0e810f834725d0c20e48))
+
 ## [1.4.0](https://github.com/sillybit-io/colorhacks/compare/v1.3.1...v1.4.0) (2024-11-24)
 
 ### Features
