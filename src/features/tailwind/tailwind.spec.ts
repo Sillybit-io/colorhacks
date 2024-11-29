@@ -128,7 +128,6 @@ describe('tailwind', () => {
   describe('exportThemeToCSS', () => {
     it('should generate CSS variables', () => {
       const theme = generateTheme({ baseColor: '#3498db' });
-      console.log(theme);
       const css = exportThemeToCSS(theme);
 
       expect(css).toContain('--color-primary-default:');
@@ -158,11 +157,9 @@ describe('tailwind', () => {
       const theme = generateTheme({ baseColor: '#3498db' });
       const css = exportThemeToCSSVariablesOnly(theme);
 
-      expect(css).toContain(
-        '--color-brand-light: #8bc4ea; /* Water Splash */\n',
-      );
-      expect(css).toContain('--color-secondary-dark: #000000; /* Black */\n');
-      expect(css).toContain('--color-info-clarity: rgba(217, 169, 38, 0.2);\n');
+      expect(css).toContain('--color-brand-light: #8bc4ea; /* Water Splash */');
+      expect(css).toContain('--color-secondary-dark: #000000; /* Black */');
+      expect(css).toContain('--color-info-clarity: rgba(20, 102, 184, 0.2);');
     });
   });
 

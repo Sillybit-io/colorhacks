@@ -1,6 +1,5 @@
 import { generateColorScheme } from '@features/colorScheme/colorScheme';
 import { getColorNameFromHex } from '@features/colorname/colorname';
-import { getHEXfromHSL, getHSLfromHEX } from '@features/hsl/hsl';
 import type {
   ColorSet,
   ColorTheme,
@@ -10,7 +9,14 @@ import type {
   RegularColorTheme,
   ThemeType,
 } from './tailwind.type';
-import { generateColorSet, generateExpandedColorSet } from './tailwind.utils';
+import {
+  generateColorSet,
+  generateExpandedColorSet,
+  getErrorColor,
+  getInfoColor,
+  getSuccessColor,
+  getWarningColor,
+} from './tailwind.utils';
 
 /**
  * Generates a color theme based on the provided options
@@ -55,7 +61,6 @@ export function generateTheme<T extends boolean = false>({
   errorHue = 0,
 }: GenerateThemeOptions<T>): ThemeType<T> {
   const { colors, areas } = generateColorScheme(baseColor, colorScheme);
-  const [baseH] = getHSLfromHEX(baseColor);
 
   if (expandPalette) {
     const theme: ExpandedColorTheme = {
@@ -64,18 +69,10 @@ export function generateTheme<T extends boolean = false>({
       secondary: generateExpandedColorSet(areas.secondary),
       accent: generateExpandedColorSet(areas.accent),
       neutral: generateExpandedColorSet(areas.neutral),
-      info: generateExpandedColorSet(
-        getHEXfromHSL((baseH + infoHue) % 360, 70, 50),
-      ),
-      success: generateExpandedColorSet(
-        getHEXfromHSL((baseH + successHue) % 360, 70, 50),
-      ),
-      warning: generateExpandedColorSet(
-        getHEXfromHSL((baseH + warningHue) % 360, 70, 50),
-      ),
-      error: generateExpandedColorSet(
-        getHEXfromHSL((baseH + errorHue) % 360, 70, 50),
-      ),
+      info: generateExpandedColorSet(getInfoColor(baseColor, infoHue)),
+      success: generateExpandedColorSet(getSuccessColor(baseColor, successHue)),
+      warning: generateExpandedColorSet(getWarningColor(baseColor, warningHue)),
+      error: generateExpandedColorSet(getErrorColor(baseColor, errorHue)),
       schemeColors: colors,
     };
     return theme as ThemeType<T>;
@@ -87,14 +84,10 @@ export function generateTheme<T extends boolean = false>({
     secondary: generateColorSet(areas.secondary),
     accent: generateColorSet(areas.accent),
     neutral: generateColorSet(areas.neutral),
-    info: generateColorSet(getHEXfromHSL((baseH + infoHue) % 360, 70, 50)),
-    success: generateColorSet(
-      getHEXfromHSL((baseH + successHue) % 360, 70, 50),
-    ),
-    warning: generateColorSet(
-      getHEXfromHSL((baseH + warningHue) % 360, 70, 50),
-    ),
-    error: generateColorSet(getHEXfromHSL((baseH + errorHue) % 360, 70, 50)),
+    info: generateColorSet(getInfoColor(baseColor, infoHue)),
+    success: generateColorSet(getSuccessColor(baseColor, successHue)),
+    warning: generateColorSet(getWarningColor(baseColor, warningHue)),
+    error: generateColorSet(getErrorColor(baseColor, errorHue)),
     schemeColors: colors,
   };
   return theme as ThemeType<T>;
@@ -148,12 +141,10 @@ export function exportThemeToCSSVariablesOnly(theme: ColorTheme): string[] {
         try {
           const colorName = getColorNameFromHex({ hexCode: color });
           cssVariables.push(
-            `--color-${key}-${shade.toLowerCase()}: ${color}; /* ${colorName.colorName} */\n`,
+            `--color-${key}-${shade.toLowerCase()}: ${color}; /* ${colorName.colorName} */`,
           );
         } catch (error) {
-          cssVariables.push(
-            `--color-${key}-${shade.toLowerCase()}: ${color};\n`,
-          );
+          cssVariables.push(`--color-${key}-${shade.toLowerCase()}: ${color};`);
         }
       }
     }

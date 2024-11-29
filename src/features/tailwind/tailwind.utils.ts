@@ -68,3 +68,35 @@ export function generateExpandedColorSet(baseColor: HEX): ExpandedColorSet {
     palette: shades,
   };
 }
+
+export function getErrorColor(baseColor: HEX, errorHue: number): HEX {
+  const [baseH] = getHSLfromHEX(baseColor);
+
+  const errorH = (((baseH + errorHue) % 360) + 360) % 360;
+  const adjustedH = errorH > 5 && errorH < 355 ? 0 : errorH;
+  return getHEXfromHSL(adjustedH, 85, 45);
+}
+
+export function getSuccessColor(baseColor: HEX, successHue: number): HEX {
+  const [baseH] = getHSLfromHEX(baseColor);
+
+  const successH = (((baseH + successHue) % 360) + 360) % 360;
+  const adjustedH = successH < 90 || successH > 150 ? 120 : successH;
+  return getHEXfromHSL(adjustedH, 75, 35);
+}
+
+export function getWarningColor(baseColor: HEX, warningHue: number): HEX {
+  const [baseH] = getHSLfromHEX(baseColor);
+
+  const warningH = (((baseH + warningHue) % 360) + 360) % 360;
+  const adjustedH = warningH < 30 || warningH > 50 ? 40 : warningH;
+  return getHEXfromHSL(adjustedH, 90, 50);
+}
+
+export function getInfoColor(baseColor: HEX, infoHue: number): HEX {
+  const [baseH] = getHSLfromHEX(baseColor);
+
+  const infoH = (((baseH + infoHue) % 360) + 360) % 360;
+  const adjustedH = infoH < 190 || infoH > 230 ? 210 : infoH;
+  return getHEXfromHSL(adjustedH, 80, 40);
+}
